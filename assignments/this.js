@@ -58,17 +58,16 @@ console.log(david);
 
 // code example for Explicit Binding
 
-const  yourObject = {
-    name:'Jade',
-    age: '30',
-    city: 'Colorado Springs'
+const myObject = {
+    name: 'Jade Lopez',
+    age: 30,
+    city: 'Colorado Springs',
 }
 
-const thingsYouEnjoy = ['Singing', 'Dancing', 'Reading']
+const thingsYouEnjoy = ['Dancing', 'listening to Music', 'kiking']
 
-function tellUsAboutYourself(thing1, thing2, thing3){
-    return `Hi! My name is ${this.name}, I'm ${this.age}, I live in 
-    ${this.city}, and I enjoy ${thing1}, ${thing2}, and ${thing3}.`
-  }
+function tellSuAboutYourself(thing1, thing2, thing3) {
+    return `Hi! My name is ${this.name}. I live in ${this.city}, and I enjoy ${thing1}, ${thing2}, and ${thing3}.`
+}
 
-  tellUsAboutYourself.apply(yourObject,thingsYouEnjoy);
+console.log(tellSuAboutYourself.apply(myObject,thingsYouEnjoy));
